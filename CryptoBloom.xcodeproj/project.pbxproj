@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E8312B0F2BE254D500FD66D1 /* CryptoViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8312B0E2BE254D500FD66D1 /* CryptoViewModal.swift */; };
+		E8312B122BE2593800FD66D1 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = E8312B112BE2593800FD66D1 /* RxCocoa */; };
+		E8312B142BE2593800FD66D1 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E8312B132BE2593800FD66D1 /* RxSwift */; };
 		E8CE261A2BC02034004A700B /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE26192BC02034004A700B /* Crypto.swift */; };
 		E8CE261D2BC026DB004A700B /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE261C2BC026DB004A700B /* WebService.swift */; };
 		E8D996722BBD6AB3002B7E40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D996712BBD6AB3002B7E40 /* AppDelegate.swift */; };
@@ -18,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E8312B0E2BE254D500FD66D1 /* CryptoViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoViewModal.swift; sourceTree = "<group>"; };
 		E8CE26192BC02034004A700B /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
 		E8CE261C2BC026DB004A700B /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		E8D9966E2BBD6AB3002B7E40 /* CryptoBloom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoBloom.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8312B142BE2593800FD66D1 /* RxSwift in Frameworks */,
+				E8312B122BE2593800FD66D1 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +50,7 @@
 		E8CE26152BC01DA9004A700B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E8D996752BBD6AB3002B7E40 /* ViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -51,7 +58,7 @@
 		E8CE26172BC01DD3004A700B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				E8D996752BBD6AB3002B7E40 /* ViewController.swift */,
+				E8312B0E2BE254D500FD66D1 /* CryptoViewModal.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -121,6 +128,10 @@
 			dependencies = (
 			);
 			name = CryptoBloom;
+			packageProductDependencies = (
+				E8312B112BE2593800FD66D1 /* RxCocoa */,
+				E8312B132BE2593800FD66D1 /* RxSwift */,
+			);
 			productName = CryptoBloom;
 			productReference = E8D9966E2BBD6AB3002B7E40 /* CryptoBloom.app */;
 			productType = "com.apple.product-type.application";
@@ -149,6 +160,9 @@
 				Base,
 			);
 			mainGroup = E8D996652BBD6AB3002B7E40;
+			packageReferences = (
+				E8312B102BE2593800FD66D1 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = E8D9966F2BBD6AB3002B7E40 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -177,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8CE261A2BC02034004A700B /* Crypto.swift in Sources */,
+				E8312B0F2BE254D500FD66D1 /* CryptoViewModal.swift in Sources */,
 				E8D996762BBD6AB3002B7E40 /* ViewController.swift in Sources */,
 				E8D996722BBD6AB3002B7E40 /* AppDelegate.swift in Sources */,
 				E8CE261D2BC026DB004A700B /* WebService.swift in Sources */,
@@ -403,6 +418,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E8312B102BE2593800FD66D1 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E8312B112BE2593800FD66D1 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E8312B102BE2593800FD66D1 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		E8312B132BE2593800FD66D1 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E8312B102BE2593800FD66D1 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E8D996662BBD6AB3002B7E40 /* Project object */;
 }

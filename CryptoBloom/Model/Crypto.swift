@@ -19,6 +19,6 @@ struct Crypto : Codable{
     //.6 Bunları da tanımladıktan sonra bu Crypto classını 'Codable' adında bir protocola confirm etmemiz lazım
     //..6 Biz bunları aslında 'https://app.quicktype.io' sitesine giderek nasıl kodlanması gerektiğine bakabiliriz
     
-    //7 Şimdi Service altına gidip 'WebService adında bir swift dosyası açalım ve içeriğini yazalım'
+    //7 Şimdi Service altına gidip 'WebService' adında bir swift dosyası açalım ve içeriğini yazalım
     
 }
