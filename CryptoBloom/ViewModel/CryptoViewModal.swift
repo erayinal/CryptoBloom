@@ -24,7 +24,7 @@ class CryptoViewModal{
         self.loading.onNext(true)
         let url = URL(string:"https://raw.githubusercontent.com/atilsamancioglu/K21-JSONDataSet/master/crypto.json")!
         WebService().downloadCurrencies(url: url) { result in
-            self.loading.onNext(false)  // Bu satıra gelebiliyorsa 'result'ı alabilmişiz demektir o yüzden false'a çevirdik.
+            self.loading.onNext(false)  //..11 Bu satıra gelebiliyorsa 'result'ı alabilmişiz demektir o yüzden false'a çevirdik.
             
             switch result {
             case.success(let cryptos):
@@ -37,7 +37,7 @@ class CryptoViewModal{
                 case.serverError:
                     self.error.onNext("Server Error")
                 }
-                //12 Şimdi ViewModal içerisine gidip oraya burada yaptıklarımızı entegre etmemiz lazım 
+                //12 Şimdi ViewController içerisine gidip oraya burada yaptıklarımızı entegre etmemiz lazım 
                 
             }
             //10 Şimdi google'a gidip rxswft yazarak github sayfasına gidelim ve readme kısmında Swift Package MAnager ile indirmek için oradaki url'i kopyalayalım
